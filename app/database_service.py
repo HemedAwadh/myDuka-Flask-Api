@@ -9,11 +9,16 @@ app = Flask(__name__)
 
 #set up database conn
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:admin@localhost:5432/flask_api'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://myDuka_user:admin@172.17.0.1/:5432/myDuka_api'
+
+# CREATE USER myDuka_user WITH PASSWORD 'admin';
+# GRANT CONNECT ON DATABASE myDuka_api TO myDuka_user;
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 print("basedir-----",basedir)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database', 'flask_api.db')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database', 'flask_api.db')
+
 
 
 
