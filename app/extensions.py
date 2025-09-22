@@ -26,7 +26,7 @@ app.config['SQLALCHEMY_ECHO'] = True
 #bind sqlalchemy to our flask application
 db=SQLAlchemy(app)
 
-app.config["JWT_SECRET_KEY"]= "JBL@123"
+app.config["JWT_SECRET_KEY"] = "MyKey@123"
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 #set up the database connection

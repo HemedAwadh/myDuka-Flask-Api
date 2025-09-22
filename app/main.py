@@ -1,6 +1,6 @@
-from flask import Flask,request,jsonify,redirect,url_for,session
+from flask import request,jsonify,redirect,url_for,session
 import json
-from database_service import Product,Sales,db,app,User,Payment
+from database_service import Product,Sales,User,Payment
 from datetime import datetime
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
@@ -11,7 +11,6 @@ from extensions import app, db
 
 import re
 
-app.config["JWT_SECRET_KEY"] = "MyKey@123"
 
 jwt = JWTManager(app)
 
