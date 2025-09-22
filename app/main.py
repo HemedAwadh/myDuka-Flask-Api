@@ -19,6 +19,10 @@ bcrypt =Bcrypt(app)
 
 # app = Flask(__name__)
 CORS(app)
+@app.before_request
+def create_tables():
+    print("📦 Creating all tables before first request...")
+    db.create_all()
  
 @app.route("/")
 def hello():
@@ -322,9 +326,9 @@ def checker(sale_id):
   
 
 if __name__ =="__main__":
-    with app.app_context():
-        # db.drop_all() 
-        db.create_all() 
+    # with app.app_context():
+    #     # db.drop_all() 
+    #     db.create_all() 
 
     app.run(debug=True)  
              
