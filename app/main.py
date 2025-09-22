@@ -7,6 +7,7 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager,create_access_token,jwt_required,get_jwt_identity
 from sqlalchemy import text
 from mpesa import make_stk_push
+from extensions import app, db
 
 import re
 
