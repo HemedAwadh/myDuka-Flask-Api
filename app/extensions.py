@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 #set up database conn
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:admin@localhost:5432/flask_api'
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://myDuka_user:Admin123@172.17.0.1/:5432/myDuka_api'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://myDuka_user:Admin123@172.17.0.1/:5432/myduka_api'
 
 
 #basedir = os.path.abspath(os.path.dirname(__file__))
