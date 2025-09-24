@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+    environment:
+      # Flask environment
+      FLASK_ENV: production
+      # SQLAlchemy connection string
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://myDuka_user:myDuka_pass@db:5433/myduka_api
+
+  db:
+    image: postgres:16
+    container_name: myduka_db
+    restart: always
+    environment:
+      POSTGRES_DB: myduka_api
+      POSTGRES_USER: myDuka_user
+      POSTGRES_PASSWORD: myDuka_pass
+    ports:
+      - "5433:5433"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
