@@ -15,7 +15,7 @@
 #       # Flask environment
 #       FLASK_ENV: production
 #       # SQLAlchemy connection string
-#       SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://myDuka_user:myDuka_pass@db:5432/myduka_api
+#       SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://myDuka_user:Admin123@db:5432/myduka_api
 
 #   db:
 #     image: postgres:16
@@ -24,7 +24,7 @@
 #     environment:
 #       POSTGRES_DB: myduka_api
 #       POSTGRES_USER: myDuka_user
-#       POSTGRES_PASSWORD: myDuka_pass
+#       POSTGRES_PASSWORD: Admin123
 #     ports:
 #       - "5432:5432"
 #     volumes:
