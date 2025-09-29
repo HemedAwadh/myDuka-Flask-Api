@@ -31,7 +31,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 #set up the database connection
 # CREATE USER myDuka_user WITH PASSWORD 'admin';
-# GRANT CONNECT ON DATABASE myDuka_api TO myDuka_user;
+# GRANT CONNECT ON DATABASE myduka_api TO myduka_user;
 
-#CREATE USER myDuka_user WITH PASSWORD 'admin';
-#GRANT ALL PRIVILEGES ON DATABASE flask_api TO myDuka_user;
+#CREATE USER myduka_user WITH PASSWORD 'Admin123';
+#GRANT ALL PRIVILEGES ON DATABASE flask_api TO myduka_user;

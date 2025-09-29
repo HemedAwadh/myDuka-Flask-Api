@@ -14,11 +14,11 @@ import re
 
 jwt = JWTManager(app)
 
-bcrypt =Bcrypt(app)
+# bcrypt =Bcrypt(app)
 
 
 # app = Flask(__name__)
-CORS(app)
+
 @app.before_request
 def create_tables():
     print("📦 Creating all tables before first request...")
